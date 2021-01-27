@@ -3,7 +3,16 @@ describe("guestbook", () => {
     cy.visit("/guestbook.html");
     cy.get("form textarea").type("Hej här är ett inlägg");
     cy.get("form").submit();
-    cy.get("#entries p a").click().end();
+    cy.get("#entries p").should(() => {
+      expect(localStorage.getItem("guestbook")).to.eq(
+        '["Hej här är ett inlägg"]'
+      );
+    });
+    cy.get("#entries p a").click();
+    cy.get("#entries p").should(() => {
+      expect(localStorage.getItem("guestbook")).to.eq("[]");
+    });
+    cy.end();
   });
 
   it("Cant post if textarea is empty", () => {
