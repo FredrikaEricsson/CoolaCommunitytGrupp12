@@ -1,0 +1,23 @@
+{
+  "name": "coolacommunitytgrupp12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FredrikaEricsson/CoolaCommunitytGrupp12.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FredrikaEricsson/CoolaCommunitytGrupp12/issues"
+  },
+  "homepage": "https://github.com/FredrikaEricsson/CoolaCommunitytGrupp12#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^6.3.0"
+  }
+}
