@@ -1,4 +1,4 @@
-describe('Login form', () => {
+describe('Login, presentation, logout', () => {
     it('Misslyckas med inloggning', () => {
         cy.visit("/");
         cy.get("form");
