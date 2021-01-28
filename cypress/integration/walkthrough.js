@@ -46,15 +46,14 @@ describe('User walkthrough website', ()=>{
         cy.get('a[href*="start.html"]').click();
         cy.get('ul>li').eq(0).click();
         cy.wait(1000);
-        cy.get('a').click(); // Ifall det inte finns några inlägg så är "Tillbaka" den ända a taggen = inlägget är borttaget!
+        cy.get('a').click(); 
     });
 
     it('Can use presentation', ()=>{
         cy.get('ul>li').eq(1).click();
         cy.contains('Prentation!');
         cy.get('a').click();
-        cy.get('ul>li').eq(2).click();
+        cy.get('ul>li').eq(2).click().end();
     });
-    
 });
 
